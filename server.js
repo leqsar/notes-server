@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
-app.get('/express_backend', (req, res) => {
+app.get('https://notes-app-serv.herokuapp.com/express_backend', (req, res) => {
   let fileContent = fs.readFileSync("notesData.json", "utf8");
   res.send({data: fileContent});
 });
