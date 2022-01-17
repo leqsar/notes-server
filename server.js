@@ -4,11 +4,11 @@ const port = process.env.PORT || 5000;
 const fs = require("fs");
 const bodyParser = require('body-parser');
 
-app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'https://naughty-johnson-cd5eb4.netlify.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-    res.setHeader('Access-Control-Allow-Headers', 'origin, content-type, accept');
-    next();
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  next();
 });
 
 const urlencodedParser = express.urlencoded({extended: false});
