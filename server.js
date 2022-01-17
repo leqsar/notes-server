@@ -5,7 +5,7 @@ const fs = require("fs");
 const bodyParser = require('body-parser');
 
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'https://naughty-johnson-cd5eb4.netlify.app/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://naughty-johnson-cd5eb4.netlify.app');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     res.setHeader('Access-Control-Allow-Headers', 'origin, content-type, accept');
     next();
